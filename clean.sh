@@ -9,5 +9,5 @@ kubectl -n kubernetes-dashboard delete serviceaccount admin-user
 kubectl -n kubernetes-dashboard delete clusterrolebinding admin-user
 
 #Install metrics server
-echo "Installing metrics-server..."
+echo "Uninstalling metrics-server..."
 kubectl delete -f k8s-dashboard.yaml
