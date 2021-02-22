@@ -8,6 +8,7 @@
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
 - [Take it down](#take-it-down)
+- [Issues](#issues)
 
 
 ## Project
@@ -37,3 +38,5 @@ This projects aims to be a quick start for the Kubernetes dashboard
     ```
     bash clean.sh
     ```
+## Issues
+1. If for any reason when executing the ```bash setup.sh``` to install and start up the dashboard, the web browser opens up with it already logged in and with no information regarding the cluster being displayed, just sign out and login again with the token aready copied into the clipboard
