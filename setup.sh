@@ -55,8 +55,11 @@ if [[ $count -gt 10 ]]; then
     kubectl -n kubernetes-dashboard get pods -l k8s-app=kubernetes-dashboard
 fi
 
+echo -e "\n${bold}Access token copied to clipboard...${normal}"
+kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}" | pbcopy
+
 echo -e "\n${bold}Opening up dashboard url...${normal}"
 open http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
-kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}" | pbcopy
+
 echo -e "\n${bold}Starting up dashboard server...${normal}"
 kubectl proxy
