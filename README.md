@@ -39,6 +39,6 @@ This projects aims to be a quick start for the Kubernetes dashboard
     bash clean.sh
     ```
 ## Issues
-1. If for any reason when executing the ```bash setup.sh``` to install and start up the dashboard, the web browser opens up with it already logged in and with no information regarding the cluster being displayed, just sign out and login again with the token aready copied into the clipboard.
+1. If for any reason when executing the ```bash setup.sh``` to install and start up the dashboard, the web browser opens up with it already logged in and with no information regarding the cluster being displayed, just sign out and login again using the token aready copied into the clipboard.
 
-2. If the browser doesn't load the dashboard right away, just give it few seconds and refresh the page.
+2. If the browser doesn't load the dashboard right away, just give it few seconds and refresh the page. Also check the warning messages displayed by the ```setup.sh``` script - the dashboard pod may still be in the pending state.
